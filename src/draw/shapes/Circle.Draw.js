@@ -26,7 +26,7 @@ L.Circle.Draw = L.SimpleShape.Draw.extend({
 	_fireCreatedEvent: function () {
 		this._map.fire(
 			'draw:circle-created',
-			{ circ: new L.Circle(this._startLatLng, this._shape.getRadius(), this.options.shapeOptions) }
+			{ circ: new L.Circle(this._shape._latlng, this._shape.getRadius(), this.options.shapeOptions) }
 		);
 	}
 });
